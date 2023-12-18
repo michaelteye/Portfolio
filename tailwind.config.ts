@@ -31,7 +31,7 @@ const config: Config = {
         'mobilem':'20px',
         'mobilepa':'100px'
 
-      }
+      },
     },
   },
   plugins: [],

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Signature from "./ImageSvg/signnature";
-import footimage from "../../public/logo1.png";
+import footimage from "../../public/logo-removebg-preview.png";
 
 const Footer = () => {
   return (
@@ -8,11 +8,12 @@ const Footer = () => {
       <div className="text-center  justify-center items-center mx-auto pt-10 ">
         <Image
           src={footimage}
-          width={100}
-          height={80}
+          width={200}
+          height={100}
           alt="Logo"
           className="rounded-full items-center text-white  text-center justify-center  mb-10 mx-auto mt-[70px] "
         />
+         👋
       </div>
       <div>
         <ul className="flex justify-center space-x-10 text-[13px] text-[#5d5c5c]">

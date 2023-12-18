@@ -1,16 +1,23 @@
+"use client"
 import React from "react";
 import LinkedIn from "../ImageSvg/LinkedIn";
 import Twitter from "../ImageSvg/Twitter";
 import LocationSvg from "../ImageSvg/location";
 import PhoneSvg from "../ImageSvg/phone";
 import EmailSvg from "../ImageSvg/email";
+import ContactForm from "./contactForm";
+import { motion } from "framer-motion";
 
 const ContactCard = () => {
   return (
     <>
-      <div className="relative z-10 overflow-hidden py-20 dark:bg-dark lg:py-[120px]">
+      <div className=" z-10 overflow-hidden py-20 dark:bg-dark lg:py-[120px]">
         <div className="contaner">
-          <div className="-mx-4 flex flex-wrap lg:justify-between bg-black rounded-mainradius shadow-2xl">
+          <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+           className="-mx-4 flex flex-wrap lg:justify-between bg-black rounded-mainradius shadow-2xl">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]">
@@ -68,50 +75,13 @@ const ContactCard = () => {
                     <div className="p-4 border rounded-full my-4 border-[#2b2b2b] bg-gradient-to-r from-[#1f1f1f] to-[#141414c7]">
                       <Twitter className="object-cover items-center m-2 box-border border-solid border-white" />
                     </div>
-                    <div className="p-4 border rounded-full my-4 border-[#2b2b2b] bg-gradient-to-r from-[#1f1f1f] to-[#141414c7]">
-                      <Twitter className="object-cover items-center m-2 box-border border-solid border-white" />
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative rounded-lg bg-[#323232] p-8 shadow-2xl dark:bg-dark-2 sm:p-12">
-                <form>
-                  <ContactInputBox
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="email"
-                    placeholder="Your Email"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="phone"
-                    placeholder="Your Phone"
-                  />
-                  <ContactTextArea
-                    row="6"
-                    placeholder="Your Message"
-                    name="details"
-                    defaultValue=""
-                  />
-                  <div>
-                    <button
-                      type="submit"
-                      className="w-full rounded border border-primary bg-primary p-3 text-white hover:bg-blue-300 transition hover:bg-opacity-90"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-                <div></div>
-              </div>
-            </div>
-          </div>
+            {/* contact form goes here */}
+            <ContactForm/>
+          </motion.div>
         </div>
       </div>
     </>
@@ -120,36 +90,4 @@ const ContactCard = () => {
 
 export default ContactCard;
 
-export const ContactTextArea = ({
-  row,
-  placeholder,
-  name,
-  defaultValue,
-}: any) => {
-  return (
-    <>
-      <div className="mb-6">
-        <textarea
-          rows={row}
-          placeholder={placeholder}
-          name={name}
-          className="w-full resize-none rounded text-black border border-stroke px-[14px] py-3 text-base "
-          defaultValue={defaultValue}
-        />
-      </div>
-    </>
-  );
-};
 
-export const ContactInputBox = ({ type, placeholder, name }: any) => {
-  return (
-    <div className="mb-6">
-      <input
-        type={type}
-        placeholder={placeholder}
-        name={name}
-        className="w-full rounded border border-stroke px-[14px] py-3 text-base text-black"
-      />
-    </div>
-  );
-};

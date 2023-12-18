@@ -1,16 +1,20 @@
+"use client"
 import Image from "next/image";
-import asterisk from "../../../public/asterisk.png";
-import profile from "../../../public/met.png";
-import starcap from "../../../public/starcap.png";
-import EducationExperience from "./eduExperience";
-import OtherInfo from "./otherInfo";
+import profile from "../../../public/michaelss.png";
 import AsteriskSvg from "../ImageSvg/asterisk";
 import DownarrowSvg from "../ImageSvg/downarrow";
+import EducationExperience from "./eduExperience";
+import OtherInfo from "./otherInfo";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <>
-      <div className="grid grid-col-1 justify-between md:flex md:pt-20 w-full">
+      <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+       className="grid grid-col-1 justify-between md:flex md:pt-20 w-full">
         <div className="w-1/2 sm:w-[30%] md:w-[33%] justify-center">
           <div className="text-center p-5 rounded-mainradius flex bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] sm:grid grid-col-1 sm:w-full md:justify-center">
             <Image
@@ -41,13 +45,12 @@ const AboutSection = () => {
                      <DownarrowSvg className=" text-[#777777] mt-[-23px]"/>
                     {/* </p> */}
                     <h1 className=" md:text-4xl text-white uppercase mt-10">
-                      cool
+                      Teye Michael
                     </h1>
                     <p className="text-white md:text-base pb-2">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Quae deserunt ullam, officiis ea praesentium aut ut, id,
-                      nihil quos nemo quisquam cumque? Culpa similique
-                      the main afirm yet to be pronounced
+                    Creative, detail-oriented, software engineer with a deep interest in Web Development.
+                    Proven track record of creating and implementing successful front and back end web applications. 
+                    Looking to bring my skills to a tech company with global reach.
                     </p>
                   </div>
                 </div>
@@ -55,7 +58,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <EducationExperience/>
       <OtherInfo />
     </>

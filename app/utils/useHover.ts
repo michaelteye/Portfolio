@@ -13,7 +13,7 @@ const useHover = ()=>{
     }
     
     const textStyle = {
-        color: isHovered ? "white":"inherent",
+        color: isHovered ? "white":"#5d5c5c",
     }
 
     return{

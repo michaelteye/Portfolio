@@ -1,11 +1,19 @@
+"use client"
 import Link from "next/link";
 import { CardProps } from "../Card";
 import People from "../ImageSvg/People";
 import SvgCar from "../ImageSvg/sync";
+import useHover from "@/app/utils/useHover";
+import { motion } from "framer-motion";
 
 const Achievement = ({ title, description }: CardProps) => {
+  const {handleHover, handleHoverExit, textStyle} = useHover()
   return (
-    <div className="grid grid-cols-1 md:flex mt-mobilem md:mt-0 ">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+     className="grid grid-cols-1 md:flex mt-mobilem md:mt-0 ">
       <div className="w-full md:w-[90%] mt-[21px] md:mr-mobilem">
         <div className=" rounded-mainradius  shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7]">
           <div className=" w-full px-2 flex md:grid grid-cols-3 pt-[28px] pb-8 ">
@@ -31,7 +39,10 @@ const Achievement = ({ title, description }: CardProps) => {
         <Link href="/blog">
           <div className=" rounded-mainradius w-full py-auto overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] py-2 relative">
             {/* Card content goes here */}
-            <div className="px-10 md:mx-auto md:pb-3 lg:pb-6 flex justify-between">
+            <div 
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHoverExit}
+            className="px-10 md:mx-auto md:pb-3 lg:pb-6 flex justify-between">
               <div className="md:px-2 md:mr-4">
                 <p>
                   <People />
@@ -44,14 +55,18 @@ const Achievement = ({ title, description }: CardProps) => {
                   <span className="text-[#5b78f6]">together.</span>
                 </h1>
               </div>
-              <div className="text-right md:ml-[50px] md:pl-2 ml-mobilepa pt-4 absolute bottom-0 right-0 md:mr-[50px] mb-[50px]">
-                <SvgCar className="justify-end text-right hover:text-white text-[#5d5c5c] font-thin" />
+              <div 
+              className="text-right md:ml-[50px] md:pl-2 ml-mobilepa pt-4 absolute bottom-0 right-0 md:mr-[50px] mb-[50px]">
+                <SvgCar
+              style={textStyle}
+
+                 className="justify-end text-right hover:text-white text-[#5d5c5c] font-thin" />
               </div>
             </div>
           </div>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

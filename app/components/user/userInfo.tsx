@@ -1,13 +1,16 @@
-import React from 'react'
-import Blog from '../service/Blog'
+"use client"
+import { motion } from 'framer-motion';
 import profile from "../../../public/met.png";
 import Service from '../service/service';
-import Profile from './Profile';
 
 
 const UserInfo = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
         {/* <div className="grid grid-cols-1 md:flex w-full"> */}
         {/* <Blog
         title="Blog Page"
@@ -17,16 +20,14 @@ const UserInfo = () => {
         <Service
         title="SPECIALIZATION"
         description="Service Offering"
-        imageUrl={profile}
-
-        />
+        imageUrl={profile}/>
         {/* <Profile
         title="User Profile"
         description="Credentials"
         imageUrl={profile}
         /> */}
       {/* </div> */}
-    </div>
+    </motion.div>
   )
 }
 
