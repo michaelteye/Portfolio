@@ -23,8 +23,8 @@ const EducationExperience = () => {
         <div className='w-full sm:w-1/2 sm:ml-mobilem sm:pt-mobilem'>
             <div className=' rounded-mainradius md:pl-6 md:py-6 pl-4 py-4 bg-gradient-to-r from-[#1f1f1f] to-[#141414c7]'>
                 <p className='text-white md:pb-4'>EDUCATION</p>
-                <p className=' text-color md:pb-3'>2015 -2018</p>
-                <p className='text-white'>St Martin's Senior High School</p>
+                <p className='text-color md:pb-3'>2015 -2018</p>
+                <p className='text-white'>St Martin Senior High School</p>
                 <p className='text-color md:pb-7'>Science With IT as Moajor</p>
                 <p className='text-color md:pb-2'>2019 - 2023</p>
                 <p className='text-white'>GCTU</p>
