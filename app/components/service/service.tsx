@@ -20,7 +20,7 @@ const Service = ({ title, description }: CardProps) => {
         <div
           onMouseEnter={handleHover}
           onMouseLeave={handleHoverExit}
-          className="hover:text-white w-full md:w-auto rounded-[30px] md:mt-5 mt-mobilem overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414]"
+          className="hover:text-white w-full md:mr-mobilem md:w-auto rounded-[30px] md:mt-5 mt-mobilem overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414]"
         >
           {/* Card content goes here */}
           <Link href="/work">
@@ -53,7 +53,7 @@ const Service = ({ title, description }: CardProps) => {
           </div>
         </div>
 
-        <div className="w-full  md:w-[70%] mt-[21px] md:ml-[21px] md:pr-mobilem md:pl-0 sm:pl-mobilem ">
+        <div className="w-full  md:w-[70%] mt-[21px] md:pl-0 sm:pl-mobilem ">
           <Link href="/work">
             <div className=" border-white rounded-mainradius w-full shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] py-2">
               <ul className="flex justify-evenly space-x-4 pt-[58px] pb-4  mx-4">
