@@ -34,9 +34,9 @@ export const PersonalCard = ({
       transition={{ duration: 0.5 }}
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverExit}
-      className="sm:w-full hover:cursor-pointer  z-10 md:w-auto lg:w-[50%]  mt-[90px] rounded-mainradius"
+      className="sm:w-full hover:cursor-pointer  md:w-auto lg:w-[50%]  mt-[90px] rounded-mainradius"
     >
-      <div className="grid grid-cols-1 md:py-6 sm:flex rounded-mainradius overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414]">
+      <div className="grid grid-cols-1 md:py-6 sm:flex rounded-mainradius  shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414]">
         {/* Card content goes here */}
         <div className="md:pl-10 p-10 sm:pl-10 sm:pr-3 md:p-7 w-full sm:w-[40%] md:w-auto">
           <Image
@@ -46,12 +46,12 @@ export const PersonalCard = ({
           />
         </div>
         <div className="px-2 pt-0 sm:pt-20 md:my-10 lg:my-0 md:pt-[50px] md:text-left">
-          <h4 className="font-bold lg:text-xl text-cardText opacity-70 sm:text-lg md:text-base">
+          <h4 className="font-bold lg:text-xl text-cardText sm:text-lg md:text-base">
             {title}
           </h4>
           <h4 className="md:text-5xl md:py-2 text-2xl  font-medium leading-10">
             {Firstname}
-            <br className="hidden md:block" />
+            <br className="hidden md:block"/>
             {Lastname}.
           </h4>
           <p

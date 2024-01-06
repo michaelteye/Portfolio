@@ -52,7 +52,7 @@ const Subwork = ({title, description}:CardProps) => {
               <div className=" ">
                 <SvgCar
                  style={textStyle}
-                 className="text-black hover:cursor-pointer" />
+                 className="text-black hover:cursor-pointer"/>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const Gallery = ({ images }: ImageProps ) => {
     <>
       <div
       
-       className="md:flex w-auto justify-center grid grid-col-1 ">
+       className="md:flex w-auto justify-center grid grid-col-1">
         {images &&
           images.map((image, index) => (
             <motion.div
@@ -32,7 +32,7 @@ const Gallery = ({ images }: ImageProps ) => {
                 dragConstraints={{ left: -100, right: 100 }}
             key={index}
              className="justify-center  mr-0 h-full text-center ">
-              <div className="md:mr-mobilem w-auto ml-2 text-center md:w-auto bg-[#202020] rounded-mainradius">
+              <div className="md:mr-mobilem mb-mobilem w-auto ml-2 text-center md:w-auto bg-[#202020] rounded-mainradius">
                 <Link href="/:id">
                 <div
                 

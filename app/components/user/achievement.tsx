@@ -37,7 +37,7 @@ const Achievement = ({ title, description }: CardProps) => {
       </div>
       <div className="md:w-[90%] mt-mobilem">
         <Link href="/blog">
-          <div className=" rounded-mainradius w-full py-auto overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] py-2 relative">
+          <div className=" rounded-mainradius z-0 w-full py-auto shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] py-2 relative">
             {/* Card content goes here */}
             <div 
             onMouseEnter={handleHover}

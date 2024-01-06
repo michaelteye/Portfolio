@@ -14,9 +14,9 @@ const AboutSection = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-       className="grid grid-col-1 justify-between md:flex md:pt-20 w-full">
-        <div className="w-1/2 sm:w-[30%] md:w-[33%] justify-center">
-          <div className="text-center p-5 rounded-mainradius flex bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] sm:grid grid-col-1 sm:w-full md:justify-center">
+       className="grid grid-col-1 justify-between md:flex pt-20 w-full">
+        <div className="w-full sm:w-1/2 md:w-[33%] justify-center sm:mx-auto md:mx-0">
+          <div className="text-center p-5 rounded-mainradius flex bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] sm:grid grid-col-1 sm:w-auto md:justify-center">
             <Image
               width={500}
               height={500}
@@ -37,7 +37,7 @@ const AboutSection = () => {
               <AsteriskSvg className="text-[#777777]"/>
             </div>
             <div className=" w-full md:mt-[18px]">
-              <div className=" rounded-mainradius w-full overflow-hidden shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] md:py-2 relative">
+              <div className=" rounded-mainradius w-full shadow-lg bg-gradient-to-r from-[#1f1f1f] to-[#141414c7] md:py-2 ">
                 {/* Card content goes here */}
                 <div className="w-auto px-[40px] md:mx-auto flex justify-between">
                   <div className="w-full md:px-2 md:mr-4 py-4 sm:pt-0 pt-0">
